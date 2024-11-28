@@ -1,0 +1,66 @@
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    overflow-y: hidden; /* Ẩn thanh cuộn dọc nếu không cần thiết */
+    margin: 20px 0;
+  }
+  
+  .custom-table {
+    table-layout:'fix';
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px; /* Đặt chiều rộng tối thiểu để thanh cuộn hoạt động */
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Ngăn nội dung xuống dòng */
+  }
+  
+  .custom-table th {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .custom-table .sticky-col {
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+    border-right: 1px solid #ddd; /* Đảm bảo viền giữa cột đầu và các cột khác */
+    text-align: center;
+  }
+  
+  .custom-table .sticky-col strong {
+    font-weight: bold;
+  }
+  
+  table {
+    border-radius: 10px; /* Bo góc cho bảng */
+    overflow: hidden; /* Đảm bảo bo góc hiển thị chính xác */
+  }
+  
+  thead th:first-child {
+    border-top-left-radius: 10px; /* Bo góc trên trái */
+  }
+  
+  thead th:last-child {
+    border-top-right-radius: 10px; /* Bo góc trên phải */
+  }
+  
+  tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Bo góc dưới trái */
+  }
+  
+  tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Bo góc dưới phải */
+  }
+  
+  .custom-table td:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
